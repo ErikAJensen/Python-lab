@@ -1,14 +1,15 @@
-import random  # Importerer random-funksjonen for å velge tilfeldige tegn.
-import string  # Gir tilgang til bokstaver, tall og spesialtegn.
+import random
+import string
 
-# Passordgenerator: bruker store/små bokstaver, tall, spesialtegn og nordiske bokstaver.
-def generer_passord(lengde):
-    tegn = string.ascii_letters + string.digits + string.punctuation + "øæå"
+# Passordgenerator: store/små bokstaver, tall, spesialtegn, nordiske bokstaver og brukerinput.
+def generer_passord(lengde, ekstra_tegn=""):
+    tegn = string.ascii_letters + string.digits + string.punctuation + "øæå" + ekstra_tegn
     passord = "".join(random.choice(tegn) for _ in range(lengde))
     return passord
 
-# Spør brukeren om ønsket passordlengde.
-lengde = int(input("Hvor lang passord vil du ha? "))
+# Spør brukeren
+lengde = int(input("Hvor langt passord vil du ha? "))
+ekstra = input("Skriv inn tegn du vil blande inn i passordet (eller trykk Enter for ingen): ")
 
-# Skriv ut det tilfeldige passordet.
-print("Ditt tilfeldige passord:", generer_passord(lengde))
+# Lag og vis passord
+print("Ditt tilfeldige passord:", generer_passord(lengde, ekstra))
