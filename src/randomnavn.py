@@ -1,10 +1,9 @@
 import random
-import string
 
-def random_name(lengdenavnm):
-    teggn = string.ascii_letters
-    navn = "".join(random.choice(teggn) for _ in range(lengdenavnm))
-    return navn
 
-lengde = int(input("hvor mange bokstaver skal navnet ditt ha ?"))
-print("ditt nye navn er", random_name(lengde))
+navnliste = ["Emma", "Oliver", "Nora", "Jakob", "Ella", "Liam", "Selma", "Aksel", "Sofie", "Isak", "Erik"]
+
+tilfeldig_navn = random.choice(navnliste)
+
+input("Trykk på enter for å få ditt nye navn")
+print("Ditt nye navn er ",tilfeldig_navn)
