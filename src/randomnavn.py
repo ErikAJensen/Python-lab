@@ -9,9 +9,17 @@ etternavn = ["Hansen", "Johansen", "Olsen", "Larsen", "Andersen",
     "Dahl", "Moen", "Solberg", "Moe", "Strand",
     "Knutsen", "Andreassen", "Paulsen", "Lie", "Halvorsen"]
 
+mellomnavn = [ "Marie", "Alexander", "Sofie", "Theodor", "Amalie",
+    "Emil", "Kristine", "Magnus", "Josefine", "Tobias",
+    "Cornelia", "Andreas", "Aurora", "Sebastian", "Elise",
+    "Mathias", "Ingrid", "Henrik", "Celine", "Oskar",
+    "Martine", "Leander", "Ida", "Benjamin", "Tuva"]
 
 def velg_navn():
    return random.choice(navnliste)
+
+def velg_mellomnavn():
+   return random.choice(mellomnavn)
 
 def velg_etternavn():
    return random.choice(etternavn)
@@ -22,4 +30,4 @@ while True:
    if svar.lower() == "q":
       print("Ferdig")
       break
-   print("Ditt nye navn er:", velg_navn(), velg_etternavn())
+   print("Ditt nye navn er:", velg_navn(), velg_mellomnavn(), velg_etternavn() )
